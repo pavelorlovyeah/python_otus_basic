@@ -48,13 +48,10 @@ def filter_numbers(numbers: list, numbers_type: str) -> list:
     <<< [2, 4]
     """
     numbers_type = numbers_type.lower()
-
-    if numbers_type not in [EVEN, ODD, PRIME]:
-        print('Incorrect additional argument')
-        return []
     if numbers_type == EVEN:
         return list(filter(is_even, numbers))
     if numbers_type == ODD:
         return list(filter(is_odd, numbers))
     if numbers_type == PRIME:
         return list(filter(is_prime, numbers))
+    return []

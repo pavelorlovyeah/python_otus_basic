@@ -47,6 +47,8 @@ def filter_numbers(numbers: list, numbers_type: str) -> list:
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
+    numbers_type = numbers_type.lower()
+
     if numbers_type not in [EVEN, ODD, PRIME]:
         print('Incorrect additional argument')
         return []
